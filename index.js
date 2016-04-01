@@ -4,7 +4,7 @@
 var cheerio = require('cheerio');
 var requestPromise = require('request-promise');
 
-module.export = function getWebContent(url) {
+module.exports = function getWebContent(url) {
   return requestPromise(url)
     .then(function (htmlString) {
       return cheerio.load(htmlString);
